@@ -1,4 +1,4 @@
-// Running thee program with python
+// Running the program with python
 
 If you want to run the program using python, run GUI.py and ensure Main.py is in the same directory
 Note that python needs to be installed along with customtkinter and CTkMessagebox using command prompt
