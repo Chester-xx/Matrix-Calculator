@@ -8,7 +8,8 @@ pip install CTkMessagebox
 
 // Matrix Calculator.exe
 
-I've compiled the program into an executable using PyInstaller
+I've compiled the program into an executable using PyInstaller.
+The executable should be able to run on its own without installing anything.
 
 // Other
 
