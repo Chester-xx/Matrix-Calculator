@@ -10,16 +10,16 @@ pip install CTkMessagebox
 
 I've compiled the program into an executable using PyInstaller.
 The executable should be able to run on its own without installing anything.
+Windows defender may disclose it as a virus, but i have tested it on four seperate windows devices and 
+only one has proposed it as an issue. 
 
 // Other
 
 The current functionality only supports 3x3 matrices and i plan on adding support for 2x2 matrices
-and singular matrices for individual calculations.
+and a window for a single matrix for individual calculations.
 
 The program may be buggy as it is my first open project and some functionality may not fully support
-certain actions. The datatypes currently only support integer values which exlude numbers with rational
-and irrational values such as : 1.23. But does support neegative numbers.
-
+certain actions. Since the initial start i have added float data type support to calculations and input.
 The GUI is a work in progress and does need to be changed as it feels clunky and does not fully support
 the layout that it was designed to be implemented as.
 
@@ -34,9 +34,12 @@ power and determinants are independant for A or B.
 
 The current output panel is not ideal and needs to be fixed, but it works atleast.
 
+// New Features
+
+Float data type support for input and calculation outputs
+
 // Features to soon be covered
 
-Float data types
 Component calculations
 2x2 matrices
 GUI support for single matrix input for 2x2 and 3x3 matrixes
