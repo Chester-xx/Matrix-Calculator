@@ -5,7 +5,6 @@
 # 2x2 input slide withing matrix_frame
 # single matrix with respective functions input
 # other functionality
-# enable float datatypes, and return values of functions should all return rounded in format .2f
 
 
 
@@ -18,33 +17,33 @@ import Main
 
 # GLOBALS
 
-iA11 : int = 0
-iA12 : int = 0
-iA13 : int = 0
-iA21 : int = 0
-iA22 : int = 0
-iA23 : int = 0
-iA31 : int = 0
-iA32 : int = 0
-iA33 : int = 0
+iA11 : float = 0
+iA12 : float = 0
+iA13 : float = 0
+iA21 : float = 0
+iA22 : float = 0
+iA23 : float = 0
+iA31 : float = 0
+iA32 : float = 0
+iA33 : float = 0
 
-iB11 : int = 0
-iB12 : int = 0
-iB13 : int = 0
-iB21 : int = 0
-iB22 : int = 0
-iB23 : int = 0
-iB31 : int = 0
-iB32 : int = 0
-iB33 : int = 0
+iB11 : float = 0
+iB12 : float = 0
+iB13 : float = 0
+iB21 : float = 0
+iB22 : float = 0
+iB23 : float = 0
+iB31 : float = 0
+iB32 : float = 0
+iB33 : float = 0
 
-matrix_a : list[list[int]] =[
+matrix_a : list[list[float]] =[
                                 [iA11, iA12, iA13],
                                 [iA21, iA22, iA23],
                                 [iA31, iA32, iA33]
                             ]
 
-matrix_b : list[list[int]] =[
+matrix_b : list[list[float]] =[
                                 [iB11, iB12, iB13],
                                 [iB21, iB22, iB23],
                                 [iB31, iB32, iB33]
@@ -265,11 +264,11 @@ class Gui() :
         
         try :
             
-            iA11 = int(iA11)
+            iA11 = float(iA11)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R1C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -279,11 +278,11 @@ class Gui() :
         
         try :
             
-            iA12 = int(iA12)
+            iA12 = float(iA12)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R1C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -293,11 +292,11 @@ class Gui() :
         
         try :
             
-            iA13 = int(iA13)
+            iA13 = float(iA13)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R1C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -307,11 +306,11 @@ class Gui() :
         
         try :
             
-            iA21 = int(iA21)
+            iA21 = float(iA21)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R2C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -321,11 +320,11 @@ class Gui() :
         
         try :
             
-            iA22 = int(iA22)
+            iA22 = float(iA22)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R2C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -335,11 +334,11 @@ class Gui() :
         
         try :
             
-            iA23 = int(iA23)
+            iA23 = float(iA23)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R2C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -349,11 +348,11 @@ class Gui() :
         
         try :
             
-            iA31 = int(iA31)
+            iA31 = float(iA31)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R3C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -363,11 +362,11 @@ class Gui() :
         
         try :
             
-            iA32 = int(iA32)
+            iA32 = float(iA32)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R3C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -377,11 +376,11 @@ class Gui() :
         
         try :
             
-            iA33 = int(iA33)
+            iA33 = float(iA33)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             A_R3C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -395,11 +394,11 @@ class Gui() :
         
         try :
             
-            iB11 = int(iB11)
+            iB11 = float(iB11)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R1C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -409,11 +408,11 @@ class Gui() :
         
         try :
             
-            iB12 = int(iB12)
+            iB12 = float(iB12)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R1C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -423,11 +422,11 @@ class Gui() :
         
         try :
             
-            iB13 = int(iB13)
+            iB13 = float(iB13)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R1C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -437,11 +436,11 @@ class Gui() :
         
         try :
             
-            iB21 = int(iB21)
+            iB21 = float(iB21)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R2C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -451,11 +450,11 @@ class Gui() :
         
         try :
             
-            iB22 = int(iB22)
+            iB22 = float(iB22)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R2C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -465,11 +464,11 @@ class Gui() :
         
         try :
             
-            iB23 = int(iB23)
+            iB23 = float(iB23)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R2C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -479,11 +478,11 @@ class Gui() :
         
         try :
             
-            iB31 = int(iB31)
+            iB31 = float(iB31)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R3C1.focus()
             print(f"Error data type : {VE}")
             return
@@ -493,11 +492,11 @@ class Gui() :
         
         try :
             
-            iB32 = int(iB32)
+            iB32 = float(iB32)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R3C2.focus()
             print(f"Error data type : {VE}")
             return
@@ -507,11 +506,11 @@ class Gui() :
         
         try :
             
-            iB33 = int(iB33)
+            iB33 = float(iB33)
             
         except ValueError as VE :
             
-            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers", option_1= "OK", justify = "center", option_focus = 1)
+            ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = "Please ensure there are no empty spaces and all inputs are integers or floats", option_1= "OK", justify = "center", option_focus = 1)
             B_R3C3.focus()
             print(f"Error data type : {VE}")
             return
@@ -864,6 +863,6 @@ button_store_matrixes.grid(row = 8, column = 0, sticky = "nesw", padx = 15, pady
 button_clear_matrixes = ctk.CTkButton(master = frame_matrix, text = "Clear", fg_color = "dodgerblue4", command = lambda : Gui.button_clear(), height = 35)
 button_clear_matrixes.grid(row = 9, column = 0, sticky = "nesw", padx = 15, pady = 15)
 
-# Gui.user_input_int_only(1)
+
 
 root.mainloop()
