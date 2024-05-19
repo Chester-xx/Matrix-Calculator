@@ -13,6 +13,11 @@ The executable should be able to run on its own without installing anything.
 Windows defender may disclose it as a virus, but i have tested it on four seperate windows devices and 
 only one has proposed it as an issue. 
 
+// Test.py
+
+This is a sepearate python file i am using to track new code that i implement and if youd like to see the functionality
+of new code the base idea is in the test.py file.
+
 // Other
 
 The current functionality only supports 3x3 matrices and i plan on adding support for 2x2 matrices
@@ -37,6 +42,13 @@ The current output panel is not ideal and needs to be fixed, but it works atleas
 // New Features
 
 Float data type support for input and calculation outputs
+Clear button, resets all entries to 0 and clears the output entry
+Removed the need for store button so users can just enter data and not have to worry about having to click
+store each time to do a calculation.
+New decimal formatter only works once, and it might ruin calculations so i might remove it in newer releases.
+It was supposed to format entries to two decimal places to make things more readable but it will make calculations
+less accurate as it overwrites users entered data. But it does not currently overwrite, only when the program runs
+its initial code on start-up.
 
 // Features to soon be covered
 

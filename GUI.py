@@ -15,40 +15,6 @@ import Main
 
 
 
-# GLOBALS
-
-iA11 : float = 0
-iA12 : float = 0
-iA13 : float = 0
-iA21 : float = 0
-iA22 : float = 0
-iA23 : float = 0
-iA31 : float = 0
-iA32 : float = 0
-iA33 : float = 0
-
-iB11 : float = 0
-iB12 : float = 0
-iB13 : float = 0
-iB21 : float = 0
-iB22 : float = 0
-iB23 : float = 0
-iB31 : float = 0
-iB32 : float = 0
-iB33 : float = 0
-
-matrix_a : list[list[float]] =[
-                                [iA11, iA12, iA13],
-                                [iA21, iA22, iA23],
-                                [iA31, iA32, iA33]
-                            ]
-
-matrix_b : list[list[float]] =[
-                                [iB11, iB12, iB13],
-                                [iB21, iB22, iB23],
-                                [iB31, iB32, iB33]
-                            ]
-
 sOutput : str = ""
 
 class Gui() : 
@@ -77,134 +43,45 @@ class Gui() :
         will be used to initialise the command = button_clear for button_clear_matrixes
         """
         
-        A_R1C1.delete(0, 1000)
-        A_R1C1.insert(0,"0")
+        tk_iA11.set(0)
         
-        A_R1C2.delete(0, 1000)
-        A_R1C2.insert(0,"0")
+        tk_iA12.set(0)
         
-        A_R1C3.delete(0, 1000)
-        A_R1C3.insert(0,"0")
+        tk_iA13.set(0)
         
+        tk_iA21.set(0)
         
-        A_R2C1.delete(0, 1000)
-        A_R2C1.insert(0,"0")
+        tk_iA22.set(0)
         
-        A_R2C2.delete(0, 1000)
-        A_R2C2.insert(0,"0")
+        tk_iA23.set(0)
         
-        A_R2C3.delete(0, 1000)
-        A_R2C3.insert(0,"0")
+        tk_iA31.set(0)
         
+        tk_iA32.set(0)
         
-        A_R3C1.delete(0, 1000)
-        A_R3C1.insert(0,"0")
-        
-        A_R3C2.delete(0, 1000)
-        A_R3C2.insert(0,"0")
-        
-        A_R3C3.delete(0, 1000)
-        A_R3C3.insert(0,"0")
-        
-        
-        
-        B_R1C1.delete(0, 1000)
-        B_R1C1.insert(0,"0")
-        
-        B_R1C2.delete(0, 1000)
-        B_R1C2.insert(0,"0")
-        
-        B_R1C3.delete(0, 1000)
-        B_R1C3.insert(0,"0")
-        
-        
-        B_R2C1.delete(0, 1000)
-        B_R2C1.insert(0,"0")
-        
-        B_R2C2.delete(0, 1000)
-        B_R2C2.insert(0,"0")
-        
-        B_R2C3.delete(0, 1000)
-        B_R2C3.insert(0,"0")
-        
-        
-        B_R3C1.delete(0, 1000)
-        B_R3C1.insert(0,"0")
-        
-        B_R3C2.delete(0, 1000)
-        B_R3C2.insert(0,"0")
-        
-        B_R3C3.delete(0, 1000)
-        B_R3C3.insert(0,"0")
-        
-        global iA11
-        iA11 = 0
-        
-        global iA12
-        iA12 = 0
-        
-        global iA13
-        iA13 = 0
-        
-        global iA21
-        iA21 = 0
-        
-        global iA22
-        iA22 = 0
-        
-        global iA23
-        iA23 = 0
-        
-        global iA31
-        iA31 = 0
-        
-        global iA32
-        iA32 = 0
-        
-        global iA33
-        iA33 = 0
+        tk_iA33.set(0)
 
 
-        global iB11
-        iB11 = 0
+        tk_iB11.set(0)
         
-        global iB12
-        iB12 = 0
+        tk_iB12.set(0)
         
-        global iB13
-        iB13 = 0
+        tk_iB13.set(0)
         
-        global iB21
-        iB21 = 0
+        tk_iB21.set(0)
         
-        global iB22
-        iB22 = 0
+        tk_iB22.set(0)
         
-        global iB23
-        iB23 = 0
+        tk_iB23.set(0)
         
-        global iB31
-        iB31 = 0
+        tk_iB31.set(0)
         
-        global iB32
-        iB32 = 0
+        tk_iB32.set(0)
         
-        global iB33
-        iB33 = 0
+        tk_iB33.set(0)
         
-        btnAddition._state = "disabled"
-        btnSubtraction._state = "disabled"
-        btnDeterminantA._state = "disabled"
-        btnDeterminantB._state = "disabled"
-        btnPower._state = "disabled"
-        btnMultiplication._state = "disabled"
+        EntryOutput.delete("1.0","1000.0")
         
-        btnAddition.configure(fg_color = "grey15")
-        btnSubtraction.configure(fg_color = "grey15")
-        btnDeterminantA.configure(fg_color = "grey15")
-        btnDeterminantB.configure(fg_color = "grey15")
-        btnPower.configure(fg_color = "grey15")
-        btnMultiplication.configure(fg_color = "grey15")
 
     # backend function
     def user_input_matrix_a() -> None :
@@ -218,7 +95,7 @@ class Gui() :
 
         global matrix_a
     
-        matrix_a  = [
+        matrix_a = [
                     [iA11,
                      iA12,
                      iA13],
@@ -242,7 +119,7 @@ class Gui() :
     
         global matrix_b
     
-        matrix_b  = [
+        matrix_b = [
                     [iB11,
                      iB12,
                      iB13],
@@ -255,7 +132,7 @@ class Gui() :
                     ]
 
     # backend function relies on user input in the matrix panel
-    def store() -> None :
+    def Store() -> None :
         
         # A
         
@@ -517,20 +394,6 @@ class Gui() :
         
         Gui.user_input_matrix_a()
         Gui.user_input_matrix_b()
-        
-        btnAddition._state = "enabled"
-        btnSubtraction._state = "enabled"
-        btnDeterminantA._state = "enabled"
-        btnDeterminantB._state = "enabled"
-        btnPower._state = "enabled"
-        btnMultiplication._state = "enabled"
-        
-        btnAddition.configure(fg_color = "dodgerblue4")
-        btnSubtraction.configure(fg_color = "dodgerblue4")
-        btnDeterminantA.configure(fg_color = "dodgerblue4")
-        btnDeterminantB.configure(fg_color = "dodgerblue4")
-        btnPower.configure(fg_color = "dodgerblue4")
-        btnMultiplication.configure(fg_color = "dodgerblue4")
 
     # front end function
     def Output(matrix_type : list[list[str]] = list[list[str]]) -> None :
@@ -561,9 +424,177 @@ class Gui() :
         
         EntryOutput.delete("1.0","1000.0")
         EntryOutput.insert("1.0", x)
+                
+    def decimals() -> None :
+        
+        # A
+        
+        # iA11
+        if iA11 % 1 == 0 :
+            tk_iA11.set(f"{iA11:.0f}")
     
-    # front end function of the Main.Advanced.Power() function
-    def Power() -> None :
+        else: 
+            tk_iA11.set(f"{iA11:.2f}")
+            
+            
+        # iA12
+        if iA12 % 1 == 0 :
+            tk_iA12.set(f"{iA12:.0f}")
+    
+        else: 
+            tk_iA12.set(f"{iA12:.2f}")
+            
+            
+        # iA13
+        if iA13 % 1 == 0 :
+            tk_iA13.set(f"{iA13:.0f}")
+    
+        else: 
+            tk_iA13.set(f"{iA13:.2f}")
+            
+            
+        # iA21
+        if iA21 % 1 == 0 :
+            tk_iA21.set(f"{iA21:.0f}")
+    
+        else: 
+            tk_iA21.set(f"{iA21:.2f}")
+        
+        
+        # iA22
+        if iA22 % 1 == 0 :
+            tk_iA22.set(f"{iA22:.0f}")
+    
+        else: 
+            tk_iA22.set(f"{iA22:.2f}")
+            
+            
+        # iA23
+        if iA23 % 1 == 0 :
+            tk_iA23.set(f"{iA23:.0f}")
+    
+        else: 
+            tk_iA23.set(f"{iA23:.2f}")
+            
+            
+        # iA31
+        if iA31 % 1 == 0 :
+            tk_iA31.set(f"{iA31:.0f}")
+    
+        else: 
+            tk_iA31.set(f"{iA31:.2f}")
+            
+            
+        # iA32
+        if iA32 % 1 == 0 :
+            tk_iA32.set(f"{iA32:.0f}")
+    
+        else: 
+            tk_iA32.set(f"{iA32:.2f}")
+            
+            
+        # iA33
+        if iA33 % 1 == 0 :
+            tk_iA33.set(f"{iA33:.0f}")
+    
+        else: 
+            tk_iA33.set(f"{iA33:.2f}")
+            
+            
+    # B
+        
+        # iB11
+        if iB11 % 1 == 0 :
+            tk_iB11.set(f"{iB11:.0f}")
+    
+        else: 
+            tk_iB11.set(f"{iB11:.2f}")
+            
+            
+        # iB12
+        if iB12 % 1 == 0 :
+            tk_iB12.set(f"{iB12:.0f}")
+    
+        else: 
+            tk_iB12.set(f"{iB12:.2f}")
+            
+            
+        # iB13
+        if iB13 % 1 == 0 :
+            tk_iB13.set(f"{iB13:.0f}")
+    
+        else: 
+            tk_iB13.set(f"{iB13:.2f}")
+            
+            
+        # iB21
+        if iB21 % 1 == 0 :
+            tk_iB21.set(f"{iB21:.0f}")
+    
+        else: 
+            tk_iB21.set(f"{iB21:.2f}")
+        
+        
+        # iB22
+        if iB22 % 1 == 0 :
+            tk_iB22.set(f"{iB22:.0f}")
+    
+        else: 
+            tk_iB22.set(f"{iB22:.2f}")
+            
+            
+        # iB23
+        if iB23 % 1 == 0 :
+            tk_iB23.set(f"{iB23:.0f}")
+    
+        else: 
+            tk_iB23.set(f"{iB23:.2f}")
+            
+            
+        # iB31
+        if iB31 % 1 == 0 :
+            tk_iB31.set(f"{iB31:.0f}")
+    
+        else: 
+            tk_iB31.set(f"{iB31:.2f}")
+            
+            
+        # iB32
+        if iB32 % 1 == 0 :
+            tk_iB32.set(f"{iB32:.0f}")
+    
+        else: 
+            tk_iB32.set(f"{iB32:.2f}")
+            
+            
+        # iB33
+        if iB33 % 1 == 0 :
+            tk_iB33.set(f"{iB33:.0f}")
+    
+        else: 
+            tk_iB33.set(f"{iB33:.2f}")
+            
+    def Addition() -> None :
+        
+        Gui.Store()
+        
+        Gui.Output(Main.main.addition_a_b(matrix_a, matrix_b))
+    
+    def Subtraction() -> None :
+        
+        Gui.Store()
+        
+        Gui.Output(Main.main.subtraction_a_b(matrix_a, matrix_b))
+    
+    def Multiplication() -> None : 
+        
+        Gui.Store()
+        
+        Gui.Output(Main.main.multiplication_ab(matrix_a, matrix_b))
+    
+    def Power() -> None : 
+        
+        Gui.Store()
         
         AorB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "Matrix Power",icon = "info", message = "Please select matrix A or B to perform calculation", option_1= "A", option_2= "B", justify = "center")
         
@@ -578,7 +609,7 @@ class Gui() :
                 power = int(power)
                 
             except ValueError as VE :
-                ErrorMB = ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = f"Please enter an integer.{VE}", option_1= "OK", justify = "center", option_focus = 1)
+                ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = f"Please enter an integer.{VE}", option_1= "OK", justify = "center", option_focus = 1)
                 return
                 
             print(power)
@@ -598,12 +629,24 @@ class Gui() :
                 power = int(power)
                 
             except ValueError as VE :
-                ErrorMB = ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = f"Please enter an integer.{VE}", option_1= "OK", justify = "center", option_focus = 1)
+                ErrorMB = ctkmb.CTkMessagebox(master = root , width = 150, height = 100, title = "ERROR",icon = "cancel" , message = f"Please enter an integer.{VE}", option_1= "OK", justify = "center", option_focus = 1)
                 return
             
             if power or power == 0:
                 
                 Gui.Output(Main.Advanced.Power(matrix_b, power))
+    
+    def DetA() -> None : 
+        
+        Gui.Store()
+        
+        Gui.OutAny(Main.Advanced.Determinant(matrix_a))
+    
+    def DetB() -> None :
+        
+        Gui.Store()
+        
+        Gui.OutAny(Main.Advanced.Determinant(matrix_b))
 
 """
 # GUI is relatively scalable, but poorly implemented
@@ -623,6 +666,82 @@ ctk.set_default_color_theme("dark-blue")
 root = ctk.CTk()
 root.geometry("1100x640")
 root.title("Matrix Calculator")
+
+
+
+# Tkinter variables, also have to be declared after root initialization
+
+# A
+
+tk_iA11 : ctk.DoubleVar = ctk.DoubleVar()
+iA11 : float = float(tk_iA11.get())
+
+tk_iA12 : ctk.DoubleVar = ctk.DoubleVar()
+iA12 : float = float(tk_iA11.get())
+
+tk_iA13 : ctk.DoubleVar = ctk.DoubleVar()
+iA13 : float = float(tk_iA13.get())
+
+tk_iA21 : ctk.DoubleVar = ctk.DoubleVar()
+iA21 : float = float(tk_iA21.get())
+
+tk_iA22 : ctk.DoubleVar = ctk.DoubleVar()
+iA22 : float = float(tk_iA22.get())
+
+tk_iA23 : ctk.DoubleVar = ctk.DoubleVar()
+iA23 : float = float(tk_iA23.get())
+
+tk_iA31 : ctk.DoubleVar = ctk.DoubleVar()
+iA31 : float = float(tk_iA31.get())
+
+tk_iA32 : ctk.DoubleVar = ctk.DoubleVar()
+iA32 : float = float(tk_iA32.get())
+
+tk_iA33 : ctk.DoubleVar = ctk.DoubleVar()
+iA33 : float = float(tk_iA33.get())
+
+# B
+
+tk_iB11 : ctk.DoubleVar = ctk.DoubleVar()
+iB11 : float = float(tk_iB11.get())
+
+tk_iB12 : ctk.DoubleVar = ctk.DoubleVar()
+iB12 : float = float(tk_iB11.get())
+
+tk_iB13 : ctk.DoubleVar = ctk.DoubleVar()
+iB13 : float = float(tk_iB13.get())
+
+tk_iB21 : ctk.DoubleVar = ctk.DoubleVar()
+iB21 : float = float(tk_iB21.get())
+
+tk_iB22 : ctk.DoubleVar = ctk.DoubleVar()
+iB22 : float = float(tk_iB22.get())
+
+tk_iB23 : ctk.DoubleVar = ctk.DoubleVar()
+iB23 : float = float(tk_iB23.get())
+
+tk_iB31 : ctk.DoubleVar = ctk.DoubleVar()
+iB31 : float = float(tk_iB31.get())
+
+tk_iB32 : ctk.DoubleVar = ctk.DoubleVar()
+iB32 : float = float(tk_iB32.get())
+
+tk_iB33 : ctk.DoubleVar = ctk.DoubleVar()
+iB33 : float = float(tk_iB33.get())
+
+
+
+matrix_a : list[list[float]] =[
+                                [iA11, iA12, iA13],
+                                [iA21, iA22, iA23],
+                                [iA31, iA32, iA33]
+                            ]
+
+matrix_b : list[list[float]] =[
+                                [iB11, iB12, iB13],
+                                [iB21, iB22, iB23],
+                                [iB31, iB32, iB33]
+                            ]
 
 
 
@@ -669,21 +788,21 @@ main_frame.grid_rowconfigure(3, weight = 1, pad = 30)
 main_frame.grid_rowconfigure(4, weight = 1, pad = 30)
 main_frame.grid_rowconfigure(5, weight = 1, pad = 30)
 main_frame.grid_rowconfigure(6, weight = 1, pad = 30)
-main_frame.grid_rowconfigure(7, weight = 1, pad = 30)
+# main_frame.grid_rowconfigure(7, weight = 1, pad = 30)
 
 # main buttons
 
 
 
-btnAddition = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Addition", fg_color = "dodgerblue4", command = lambda : Gui.Output(Main.main.addition_a_b(matrix_a, matrix_b)))
+btnAddition = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Addition", fg_color = "dodgerblue4", command = lambda : Gui.Addition())
 btnAddition.grid(row = 1, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnAddition._state = "disabled"
 
-btnSubtraction = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Subtraction", fg_color = "dodgerblue4", command = lambda : Gui.Output(Main.main.subtraction_a_b(matrix_a, matrix_b)))
+btnSubtraction = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Subtraction", fg_color = "dodgerblue4", command = lambda : Gui.Subtraction())
 btnSubtraction.grid(row = 2, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnSubtraction._state = "disabled"
 
-btnMultiplication = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Multiplication", fg_color = "dodgerblue4", command = lambda : Gui.Output(Main.main.multiplication_ab(matrix_a, matrix_b)))
+btnMultiplication = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Multiplication", fg_color = "dodgerblue4", command = lambda : Gui.Multiplication())
 btnMultiplication.grid(row = 3, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnMultiplication._state = "disabled"
 
@@ -691,11 +810,11 @@ btnPower = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbt
 btnPower.grid(row = 4, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnPower._state = "disabled"
 
-btnDeterminantA = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Determinant of A", fg_color = "dodgerblue4", command = lambda : Gui.OutAny(Main.Advanced.Determinant(matrix_a)))
+btnDeterminantA = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Determinant of A", fg_color = "dodgerblue4", command = lambda : Gui.DetA())
 btnDeterminantA.grid(row = 5, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnDeterminantA._state = "disabled"
 
-btnDeterminantB = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Determinant of B", fg_color = "dodgerblue4", command = lambda : Gui.OutAny(Main.Advanced.Determinant(matrix_b)))
+btnDeterminantB = ctk.CTkButton(master = main_frame, corner_radius = 12, font = cfontbtn, text = "Determinant of B", fg_color = "dodgerblue4", command = lambda : Gui.DetB())
 btnDeterminantB.grid(row = 6, column = 1, sticky = "nesw", padx = 35, pady = 20)
 # btnDeterminantB._state = "disabled"
 
@@ -704,7 +823,7 @@ btnDeterminantB.grid(row = 6, column = 1, sticky = "nesw", padx = 35, pady = 20)
 
 # output
 
-# change row to 3 and rowspan to 3 when redoing GUI
+# change row to 3 and rowspan to 3 when redoing GUI, Reminder that it creates 3 rows for 3 sections of components
 EntryOutput = ctk.CTkTextbox(master = main_frame, font = ctk.CTkFont("capilary", 28, "bold"), corner_radius = 10)
 EntryOutput.grid(column = 2, row = 2, rowspan = 4, sticky = "nsew")
 
@@ -765,33 +884,33 @@ frame_a.grid_columnconfigure(0, weight = 1)
 frame_a.grid_columnconfigure(1, weight = 1)
 frame_a.grid_columnconfigure(2, weight = 1)
     
-A_R1C1 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R1C1 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA11, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R1C1.grid(row = 0, column = 0, padx = 5, pady = 10)
     
-A_R1C2 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R1C2 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA12, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R1C2.grid(row = 0, column = 1, padx = 5, pady = 5)
     
-A_R1C3 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R1C3 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA13, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R1C3.grid(row = 0, column = 2, padx = 5, pady = 5)
     
     
-A_R2C1 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R2C1 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA21, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R2C1.grid(row = 1, column = 0, padx = 5, pady = 5)
     
-A_R2C2 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R2C2 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA22, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R2C2.grid(row = 1, column = 1, padx = 5, pady = 5)
     
-A_R2C3 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R2C3 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA23, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R2C3.grid(row = 1, column = 2, padx = 5, pady = 5)
     
     
-A_R3C1 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R3C1 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA31, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R3C1.grid(row = 2, column = 0, padx = 5, pady = 10)
     
-A_R3C2 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R3C2 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA32, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R3C2.grid(row = 2, column = 1, padx = 5, pady = 5)
     
-A_R3C3 = ctk.CTkEntry(master = frame_a, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+A_R3C3 = ctk.CTkEntry(master = frame_a, textvariable = tk_iA33, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 A_R3C3.grid(row = 2, column = 2, padx = 5, pady = 5)
     
     
@@ -820,41 +939,34 @@ frame_b.grid_columnconfigure(0, weight = 1)
 frame_b.grid_columnconfigure(1, weight = 1)
 frame_b.grid_columnconfigure(2, weight = 1)
     
-B_R1C1 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R1C1 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB11, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R1C1.grid(row = 0, column = 0, padx = 5, pady = 10)
 
-B_R1C2 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R1C2 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB12, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R1C2.grid(row = 0, column = 1, padx = 5, pady = 5)
 
-B_R1C3 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R1C3 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB13, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R1C3.grid(row = 0, column = 2, padx = 5, pady = 5)
 
 
-B_R2C1 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R2C1 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB21, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R2C1.grid(row = 1, column = 0, padx = 5, pady = 5)
 
-B_R2C2 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R2C2 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB22, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R2C2.grid(row = 1, column = 1, padx = 5, pady = 5)
 
-B_R2C3 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R2C3 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB23, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R2C3.grid(row = 1, column = 2, padx = 5, pady = 5)
 
 
-B_R3C1 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R3C1 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB31, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R3C1.grid(row = 2, column = 0, padx = 5, pady = 10)
     
-B_R3C2 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R3C2 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB32, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R3C2.grid(row = 2, column = 1, padx = 5, pady = 5)
 
-B_R3C3 = ctk.CTkEntry(master = frame_b, placeholder_text = "0", corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
+B_R3C3 = ctk.CTkEntry(master = frame_b, textvariable = tk_iB33, corner_radius = 0, height = 35, width = 35, justify="center", font = cfont)
 B_R3C3.grid(row = 2, column = 2, padx = 5, pady = 5)
-
-
-
-# button store
-    
-button_store_matrixes = ctk.CTkButton(master = frame_matrix, text = "Store", height = 50, fg_color = "dodgerblue4", command = lambda : Gui.store())
-button_store_matrixes.grid(row = 8, column = 0, sticky = "nesw", padx = 15, pady = 10)
 
 
 
@@ -864,5 +976,7 @@ button_clear_matrixes = ctk.CTkButton(master = frame_matrix, text = "Clear", fg_
 button_clear_matrixes.grid(row = 9, column = 0, sticky = "nesw", padx = 15, pady = 15)
 
 
+# may remove in a later stage
+Gui.decimals()
 
 root.mainloop()
