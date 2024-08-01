@@ -30,10 +30,7 @@ the layout that it was designed to be implemented as.
 
 // Controls
 
-When opening the application, to use the calculation buttons you will need to enter in matrices A and B
-and click store. It unfortunately doesnt support single matrix calculations as of yet so if you are working
-on a single matrix, both A and B need to be filled in with some type of placeholder but the buttons such as
-power and determinants are independant for A or B.
+Buttons such as power and determinants are independant for A or B. Now supports automatic storing of entered data from the user instead of manual storing with a button.
 
 // Output
 
