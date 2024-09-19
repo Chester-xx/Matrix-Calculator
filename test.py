@@ -28,4 +28,6 @@ def inc(var) -> None :
 
 root.mainloop()
 
+def _2x2() -> None :
+
 # Above release Pre v1.0.2 test code
